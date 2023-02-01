@@ -1,4 +1,4 @@
-let textarea = document.querySelector("#input_textarea");
+let message = document.querySelector("#message_textarea");
 let result = document.querySelector("#result_textarea");
 let encryptButton = document.querySelector("#encrypt_button");
 let decryptButton = document.querySelector("#decrypt_button");
@@ -6,7 +6,7 @@ let copyButton = document.querySelector("#copy_button");
 let clearButton = document.querySelector("#clear_button")
 
 function encrypt(){
-    let text = textarea.value;
+    let text = message.value;
     let encryptedText = text.replaceAll("e", "enter")
     .replaceAll("i", "imes")
     .replaceAll("a", "ai")
@@ -17,7 +17,7 @@ function encrypt(){
 }
 
 function decrypt(){
-    let text = textarea.value;
+    let text = message.value;
     let decryptedText = text.replaceAll("enter", "e")
     .replaceAll("imes", "i")
     .replaceAll("ai", "a")
@@ -33,12 +33,12 @@ function copy(){
         window.navigator.clipboard.writeText(result.value);
     }
     
-    textarea.focus();
+    message.focus();
 }
 
 function clear(){
     result.value = "";
-    textarea.focus();
+    message.focus();
 
 }
 

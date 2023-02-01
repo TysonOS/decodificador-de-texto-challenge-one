@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -12,42 +15,43 @@
 </head>
 <body>
     <header>
-        <div id="logo">
-            Encriptone
-        </div>
+        <h1 class="logo">Encriptone</h1>
     </header>
 
-    <main class="container">
-        <div id="inputs">
-            <textarea id="input_textarea" placeholder="Digite seu texto..." autofocus></textarea>
-            <div class="tip">
-                <img alt="tip exclamation" src="img/exclamation.svg">
-                <span>Apenas letras minúsculas e sem acento.<p>
-            </div>
-            <div class="buttons">
-                <button id="encrypt_button">Criptografar</button>
-                <button id="decrypt_button">Descriptografar</button>
-            </div>
-        </div>
-        
-        <div id="no_message" class="result" >
-            <img src="img/typing.svg" alt="Nenhuma imagem encontrada" width="50%">
-            <p>Nenhuma mensagem encontrada</p>
-            <p class="tip">Digite o texto que deseja criptografar ou descriptografar</p>
-        </div>
-        
-        <div id="result" class="result hidden">
-                <textarea id="result_textarea" placeholder="Nenhuma mensagem" disabled></textarea>
-                <div class="buttons">
-                    <button id="copy_button">Copiar</button>
-                    <button id="clear_button">Limpar</button>
+    <main>
+        <div class="container">
+            <div class="inputs">
+                <textarea id="message_textarea" placeholder="Digite seu texto..." autofocus></textarea>
+                <div class="tip">
+                    <img alt="tip exclamation" src="img/exclamation.svg">
+                    <span>Apenas letras minúsculas e sem acento.<p>
                 </div>
+                <div class="buttons">
+                    <button id="encrypt_button">Criptografar</button>
+                    <button id="decrypt_button">Descriptografar</button>
+                </div>
+            </div>
+            
+            <div id="no_message" class="result" >
+                <img src="img/typing.svg" alt="Nenhuma imagem encontrada">
+                <p>Nenhuma mensagem encontrada</p>
+                <p class="tip">Digite o texto que deseja criptografar ou descriptografar</p>
+            </div>
+            
+             <div id="result" class="result hidden">
+                    <textarea id="result_textarea" placeholder="Nenhuma mensagem" disabled></textarea>
+                    <div class="buttons">
+                        <button id="copy_button">Copiar</button>
+                        <button id="clear_button">Limpar</button>
+                    </div>
+            </div>
         </div>
+        
     </main>
 
     <footer>
         <ul>
-            <li>Desenvolvido por <a target="_blank" href="https://github.com/tysonos" >@Tyson Silva</a></li>
+            <li>Desenvolvido por <a target="_blank" href="https://github.com/tysonos">@Tyson Silva</a></li>
             <li>Desafio decodificador de texto<a target="_blank" href="https://www.oracle.com/br/education/oracle-next-education/"> Alura | Oracle Next Education</a></li>
             <li><a target="_blank" href="https://github.com/TysonOS/decodificador-de-texto-challenge-one">Ver este projeto no Github </a> </li>
         </ul>
