@@ -33,7 +33,7 @@ function decrypt(){
         result.value = decryptedText;
         showResult();
     }else{
-        alert("Digite uma mensagem!");
+        alert("Digite uma mensagem válida!");
     }
     
 }
@@ -50,17 +50,26 @@ function clear(){
     result.value = "";
     message.focus();
 
-    showResult();
+    showResult(false);
 }
 
-function showResult(){
+function showResult(opt = true){
     let noMessageDiv = document.querySelector("#no_message");
     let resultDiv = document.querySelector("#result");
     let resultButtons = document.querySelector("#result .buttons");
 
-    noMessageDiv.classList.toggle("hidden");
-    resultDiv.classList.toggle("hidden");
-    resultButtons.classList.toggle("hidden");
+    let show = opt && resultDiv.classList.contains("hidden");
+    let hidden = !opt && noMessageDiv.classList.contains("hidden");
+
+    if(show){
+        noMessageDiv.classList.toggle("hidden");
+        resultDiv.classList.toggle("hidden");
+        resultButtons.classList.toggle("hidden");
+    }else if(hidden){
+        noMessageDiv.classList.toggle("hidden");
+        resultDiv.classList.toggle("hidden");
+        resultButtons.classList.toggle("hidden");
+    }
 }
 
 encryptButton.onclick = encrypt;
